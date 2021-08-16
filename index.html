@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+
+    <title>Lone Star Percussion Shortcuts</title>
+    <meta name="description" content="Shortcuts that make work life easier.">
+    <meta name="author" content="Alex Howley">
+
+    <meta property="og:title" content="Lone Star Percussion Shortcuts">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lonestarpercussion-dev.github.io/daily-shortcuts/">
+    <meta property="og:description" content="Shortcuts that make work life easier.">
+    <meta property="og:image" content="image.png">
+
+    <link rel="stylesheet" type="font/ttf" href="css/normalize.css?v=1.0">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css?v=1.0">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css?v=1.0">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css?v=1.0">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css?v=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css?v=1.0">
+</head>
+
+<body>
+    <h1>Lone Star Percussion - Shortcuts</h1>
+    <section>
+        <h2>Go to Record with Internal ID</h2>
+        <fieldset>
+            <label for="record-type-id">Record Type:</label>
+            <select name="record-type-id" id="record-type-id">
+            </select>
+        </fieldset>
+        <fieldset>
+            <label for="internal-id">Internal ID:</label>
+            <input type="text" id="internal-id" name="internal-id">
+        </fieldset>
+        <button onclick="goToRecordById();">Go to Record</button>
+    </section>
+    <section>
+        <h2>Search Record</h2>
+        <fieldset>
+            <label for="record-type-search">Record Type:</label>
+            <select name="record-type-search" id="record-type-search">
+            </select>
+        </fieldset>
+        <fieldset>
+            <label for="search-query">Query:</label>
+            <input type="text" id="search-query" name="search-query">
+        </fieldset>
+        <button onclick="searchRecord();">Search Record</button>
+    </section>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
