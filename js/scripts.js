@@ -3,10 +3,11 @@ const recordUrlsByRecordType = {
     'Site Category': 'https://665798.app.netsuite.com/app/site/setup/prescategory.nl?id=',
     'Commerce Category': 'https://665798.app.netsuite.com/app/site/cms/services/commercecategory.nl?id=',
     'Promotion': 'https://665798.app.netsuite.com/app/site/cms/services/commercecategory.nl?id=',
-    'Custom Record Type': 'https://665798.app.netsuite.com/app/common/custom/custrecord.nl?id=',
     'Saved Search': 'https://665798.app.netsuite.com/app/common/search/searchresults.nl?searchid=',
     'Sales Order': 'https://665798.app.netsuite.com/app/accounting/transactions/salesord.nl?id=',
     'Quote': 'https://665798.app.netsuite.com/app/accounting/transactions/estimate.nl?id=',
+    'Tooltip': 'https://665798.app.netsuite.com/app/common/custom/custrecordentry.nl?rectype=134&id=',
+    'Custom Record Type': 'https://665798.app.netsuite.com/app/common/custom/custrecord.nl?id=',
 }
 
 const searchUrlsByRecordType = {
@@ -14,6 +15,7 @@ const searchUrlsByRecordType = {
     'Saved Search': 'https://665798.app.netsuite.com/app/common/search/ubersearchresults.nl?quicksearch=T&searchtype=Uber&frame=be&Uber_NAMEtype=KEYWORDSTARTSWITH&Uber_NAME=search%3A',
     'Sales Order': 'https://665798.app.netsuite.com/app/common/search/ubersearchresults.nl?quicksearch=T&searchtype=Uber&frame=be&Uber_NAMEtype=KEYWORDSTARTSWITH&Uber_NAME=sales%3A',
     'Quote': 'https://665798.app.netsuite.com/app/common/search/ubersearchresults.nl?quicksearch=T&searchtype=Uber&frame=be&Uber_NAMEtype=KEYWORDSTARTSWITH&Uber_NAME=quote%3A',
+    'Tooltip': 'https://665798.app.netsuite.com/app/common/search/ubersearchresults.nl?quicksearch=T&searchtype=Uber&frame=be&Uber_NAMEtype=KEYWORDSTARTSWITH&Uber_NAME=definition%3A',
 }
 
 const adjustFieldWidth = () => {
