@@ -78,18 +78,6 @@ const searchWebsite = () => {
     window.open('https://www.lonestarpercussion.com/#/~search/page/1/view/listView/keywords/' + query);
 }
 
-const goToRecordById = () => {
-    let recordType = document.getElementById('record-type-id').value;
-    let recordId = document.getElementById('internal-id').value;
-    window.open(recordUrlsByRecordType[recordType] + recordId);
-}
-
-const searchRecord = () => {
-    let recordType = document.getElementById('record-type-search').value;
-    let searchQuery = document.getElementById('search-query').value;
-    window.open(searchUrlsByRecordType[recordType] + searchQuery);
-}
-
 const googSearch = () => {
     let query = document.getElementById('goog-query').value.toLowerCase();
     let stringArray = [];
@@ -102,6 +90,18 @@ const googSearch = () => {
     }
     query = stringArray.join('');
     window.open('https://www.google.com/search?q=' + query);
+}
+
+const goToRecordById = () => {
+    let recordType = document.getElementById('record-type-id').value;
+    let recordId = document.getElementById('internal-id').value;
+    window.open(recordUrlsByRecordType[recordType] + recordId);
+}
+
+const searchRecord = () => {
+    let recordType = document.getElementById('record-type-search').value;
+    let searchQuery = document.getElementById('search-query').value;
+    window.open(searchUrlsByRecordType[recordType] + searchQuery);
 }
 
 adjustFieldWidth();
