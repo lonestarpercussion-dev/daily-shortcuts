@@ -35,6 +35,20 @@ const populateRecordTypes = () => {
     }
 }
 
+const adjustFieldWidth = () => {
+    for (let section of document.getElementsByTagName('section')) {
+        let inputFields = Array.from(section.getElementsByTagName('fieldset'));
+        if (inputFields.length % 2 !== 0) {
+            inputFields[inputFields.length - 1].style.width = '100%';
+        }
+    }
+}
+
+const searchWebsite = () => {
+    let query = document.getElementById('website-query').value;
+    window.open('https://www.lonestarpercussion.com/#/~search/page/1/view/listView/keywords/' + query);
+}
+
 const goToRecordById = () => {
     let recordType = document.getElementById('record-type-id').value;
     let recordId = document.getElementById('internal-id').value;
@@ -47,4 +61,5 @@ const searchRecord = () => {
     window.open(searchUrlsByRecordType[recordType] + searchQuery);
 }
 
+adjustFieldWidth();
 populateRecordTypes();
