@@ -18,6 +18,8 @@ const searchUrlsByRecordType = {
     'Tooltip': 'https://665798.app.netsuite.com/app/common/search/ubersearchresults.nl?quicksearch=T&searchtype=Uber&frame=be&Uber_NAMEtype=KEYWORDSTARTSWITH&Uber_NAME=definition%3A',
 }
 
+const alnum = 'abcdefghijklmnopqrstuvwxyz1234567890';
+
 const adjustFieldWidth = () => {
     for (let section of document.getElementsByTagName('section')) {
         let inputFields = Array.from(section.getElementsByTagName('fieldset'));
@@ -86,6 +88,20 @@ const searchRecord = () => {
     let recordType = document.getElementById('record-type-search').value;
     let searchQuery = document.getElementById('search-query').value;
     window.open(searchUrlsByRecordType[recordType] + searchQuery);
+}
+
+const googSearch = () => {
+    let query = document.getElementById('goog-query').value.toLowerCase();
+    let stringArray = [];
+    for (let letter of query) {
+        if (!alnum.includes(letter)) {
+            stringArray.push('+');
+        } else {
+            stringArray.push(letter);
+        }
+    }
+    query = stringArray.join('');
+    window.open('https://www.google.com/search?q=' + query);
 }
 
 adjustFieldWidth();
