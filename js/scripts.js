@@ -16,6 +16,40 @@ const searchUrlsByRecordType = {
     'Quote': 'https://665798.app.netsuite.com/app/common/search/ubersearchresults.nl?quicksearch=T&searchtype=Uber&frame=be&Uber_NAMEtype=KEYWORDSTARTSWITH&Uber_NAME=quote%3A',
 }
 
+const adjustFieldWidth = () => {
+    for (let section of document.getElementsByTagName('section')) {
+        let inputFields = Array.from(section.getElementsByTagName('fieldset'));
+        if (inputFields.length % 2 !== 0) {
+            inputFields[inputFields.length - 1].style.width = '100%';
+        }
+    }
+}
+
+const addEnterEventListeners = () => {
+    let allElements = Array.from(document.getElementsByTagName('body')[0].getElementsByTagName('*'));
+    for (let childIndex=0; childIndex<allElements.length-1; childIndex++) {
+        let elem = allElements[childIndex];
+        if (elem.tagName === 'INPUT') {
+            let buttonForEnterKeystroke;
+            for (let followingChildIndex=childIndex+1; followingChildIndex<allElements.length; followingChildIndex++) {
+                let followingElem = allElements[followingChildIndex];
+                if (followingElem.tagName === 'BUTTON') {
+                    buttonForEnterKeystroke = followingElem;
+                    break;
+                }
+            }
+            if (buttonForEnterKeystroke) {
+                elem.addEventListener('keyup', (event) => {
+                    if (event.keyCode === 13) {
+                        event.preventDefault();
+                        buttonForEnterKeystroke.click();
+                    }
+                });
+            }
+        }
+    }
+}
+
 const populateRecordTypes = () => {
     let select = document.getElementById('record-type-id');
     let option;
@@ -32,15 +66,6 @@ const populateRecordTypes = () => {
         option.value = recordType;
         option.innerText = recordType;
         select.appendChild(option);
-    }
-}
-
-const adjustFieldWidth = () => {
-    for (let section of document.getElementsByTagName('section')) {
-        let inputFields = Array.from(section.getElementsByTagName('fieldset'));
-        if (inputFields.length % 2 !== 0) {
-            inputFields[inputFields.length - 1].style.width = '100%';
-        }
     }
 }
 
@@ -62,4 +87,5 @@ const searchRecord = () => {
 }
 
 adjustFieldWidth();
+addEnterEventListeners();
 populateRecordTypes();
