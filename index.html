@@ -66,6 +66,11 @@
     <section>
         <h2>Go to Record with Internal ID</h2>
         <fieldset>
+            <label for="record-type-id">Record Type:</label>
+            <select name="record-type-id" id="record-type-id">
+            </select>
+        </fieldset>
+        <fieldset>
             <label for="internal-id">Internal ID:</label>
             <input type="text" id="internal-id" name="internal-id">
         </fieldset>
@@ -74,11 +79,6 @@
             <select name="record-edit" id="record-edit">
                 <option value="yes">Yes</option>
                 <option value="yes">No</option>
-            </select>
-        </fieldset>
-        <fieldset>
-            <label for="record-type-id">Record Type:</label>
-            <select name="record-type-id" id="record-type-id">
             </select>
         </fieldset>
         <button onclick="goToRecordById();">Go to Record</button>
