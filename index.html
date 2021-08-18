@@ -74,12 +74,11 @@
             <label for="internal-id">Internal ID:</label>
             <input type="text" id="internal-id" name="internal-id">
         </fieldset>
-        <fieldset>
-            <label for="record-edit">Edit:</label>
-            <select name="record-edit" id="record-edit">
-                <option value="yes">Yes</option>
-                <option value="yes">No</option>
-            </select>
+        <fieldset class="radio-buttons">
+            <label for="record-view-radio">View</label>
+            <input type="radio" id="record-view-radio" name="record-edit">
+            <label for="record-edit-radio">Edit</label>
+            <input type="radio" id="record-edit-radio" name="record-edit" checked>
         </fieldset>
         <button onclick="goToRecordById();">Go to Record</button>
     </section>

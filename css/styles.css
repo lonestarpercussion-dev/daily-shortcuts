@@ -1,6 +1,7 @@
 :root {
     --content-width: 800px;
     --label-width: 120px;
+    --radio-height: 20px;
 }
 
 @font-face {
@@ -123,7 +124,7 @@ fieldset {
     padding: 10px 0;
 }
 
-select, input, select:focus-visible, input:focus-visible {
+select, input[type="text"], select:focus-visible, input:focus-visible {
     outline: none;
     float: right;
     width: calc(100% - var(--label-width));
@@ -134,12 +135,25 @@ select, input, select:focus-visible, input:focus-visible {
     padding: 13px 8px;
 }
 
+input[type="radio"] {
+    float: right;
+    height: var(--radio-height);
+    margin-left: 20px;
+}
+
 label {
     float: left;
     width: var(--label-width);
     text-align: right;
     line-height: 1.5em;
     padding: 13px 5px 13px 0;
+}
+
+.radio-buttons > label {
+    float: right;
+    width: fit-content;
+    line-height: var(--radio-height);
+    padding: 0 0 0 5px;
 }
 
 button {
