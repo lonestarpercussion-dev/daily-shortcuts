@@ -27,6 +27,27 @@
 <body>
     <h1>Lone Star Percussion - Shortcuts</h1>
     <section>
+        <h2 style="display: none;">Quick Access</h2>
+        <form action="https://665798.app.netsuite.com/app/center/card.nl?sc=-29&whence=" target="_blank">
+            <button type="submit">NetSuite</button>
+        </form>
+        <form action="https://www.lonestarpercussion.com/" target="_blank">
+            <button type="submit">Sitebuilder</button>
+        </form>
+        <form action="https://projects.zoho.com/portal/lonestarpercussion" target="_blank">
+            <button type="submit">Zoho</button>
+        </form>
+        <form action="https://www.lonestar2.kodel.la" target="_blank">
+            <button type="submit">SCA Dev</button>
+        </form>
+        <form action="https://www.lonestar.kodel.la" target="_blank">
+            <button type="submit">SCA Dev (Old)</button>
+        </form>
+        <form action="https://www.ls-noncdn.kodel.la" target="_blank">
+            <button type="submit">SCA (Stock)</button>
+        </form>
+    </section>
+    <section>
         <h2>Search Website</h2>
         <fieldset>
             <label for="website-query">Search:</label>
@@ -45,13 +66,20 @@
     <section>
         <h2>Go to Record with Internal ID</h2>
         <fieldset>
-            <label for="record-type-id">Record Type:</label>
-            <select name="record-type-id" id="record-type-id">
+            <label for="internal-id">Internal ID:</label>
+            <input type="text" id="internal-id" name="internal-id">
+        </fieldset>
+        <fieldset>
+            <label for="record-edit">Edit:</label>
+            <select name="record-edit" id="record-edit">
+                <option value="yes">Yes</option>
+                <option value="yes">No</option>
             </select>
         </fieldset>
         <fieldset>
-            <label for="internal-id">Internal ID:</label>
-            <input type="text" id="internal-id" name="internal-id">
+            <label for="record-type-id">Record Type:</label>
+            <select name="record-type-id" id="record-type-id">
+            </select>
         </fieldset>
         <button onclick="goToRecordById();">Go to Record</button>
     </section>

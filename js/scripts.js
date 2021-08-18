@@ -95,7 +95,8 @@ const googSearch = () => {
 const goToRecordById = () => {
     let recordType = document.getElementById('record-type-id').value;
     let recordId = document.getElementById('internal-id').value;
-    window.open(recordUrlsByRecordType[recordType] + recordId);
+    let edit = document.getElementById('record-edit').value === 'Yes' ? 'T' : 'F';
+    window.open(recordUrlsByRecordType[recordType] + recordId + '&e=' + edit);
 }
 
 const searchRecord = () => {

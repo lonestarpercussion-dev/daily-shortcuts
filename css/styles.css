@@ -44,11 +44,19 @@
     fieldset {
         width: 50%;
     }
+
+    form {
+        width: calc(100% / 3);
+    }
 }
 
 @media screen and (max-width: 767px) {
     fieldset {
         width: 100%;
+    }
+
+    form {
+        width: 50%;
     }
 }
 
@@ -97,10 +105,15 @@ section {
     background-color: #f5f4f0;
 }
 
-section::after {
+section::after, form::after {
     content: "";
     display: block;
     clear: both;
+}
+
+form {
+    float: left;
+    padding: 0 10px 5px 10px;
 }
 
 fieldset {
@@ -143,9 +156,14 @@ button {
     text-transform: uppercase;
     text-align: center;
     line-height: 1.3em;
-    margin: 0 5px;
+    margin: 0 0 0 10px;
     background-color: #f5d100;
     color: #000;
+}
+
+form > button {
+    width: 100%;
+    margin: 0 0 0 5px;
 }
 
 button:hover {
