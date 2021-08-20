@@ -71,29 +71,77 @@ const populateRecordTypes = () => {
     }
 }
 
-const searchWebsite = () => {
+const searchWebsite = (selfTarget = false) => {
     let query = document.getElementById('website-query').value;
-    window.open('https://www.lonestarpercussion.com/#/~search/page/1/view/listView/keywords/' + encodeURIComponent(query));
+    if (selfTarget) {
+        window.open('https://www.lonestarpercussion.com/#/~search/page/1/view/listView/keywords/' + encodeURIComponent(query), '_self');
+    } else {
+        window.open('https://www.lonestarpercussion.com/#/~search/page/1/view/listView/keywords/' + encodeURIComponent(query));
+    }
 }
 
-const googSearch = () => {
+const googSearch = (selfTarget = false) => {
     let query = document.getElementById('goog-query').value.toLowerCase();
-    window.open('https://www.google.com/search?q=' + encodeURIComponent(query));
+    if (selfTarget) {
+        window.open('https://www.google.com/search?q=' + encodeURIComponent(query), '_self');
+    } else {
+        window.open('https://www.google.com/search?q=' + encodeURIComponent(query));
+    }
 }
 
-const goToRecordById = () => {
+const goToRecordById = (selfTarget = false) => {
     let recordType = document.getElementById('record-type-id').value;
     let recordId = document.getElementById('internal-id').value;
     let edit = document.getElementById('record-edit-radio').checked ? '&e=T' : '';
-    window.open(recordUrlsByRecordType[recordType] + recordId + edit);
+    if (selfTarget) {
+        window.open(recordUrlsByRecordType[recordType] + recordId + edit, '_self');
+    } else {
+        window.open(recordUrlsByRecordType[recordType] + recordId + edit);
+    }
 }
 
-const searchRecord = () => {
+const searchRecord = (selfTarget = false) => {
     let recordType = document.getElementById('record-type-search').value;
     let searchQuery = document.getElementById('search-query').value;
-    window.open(searchUrlsByRecordType[recordType] + encodeURIComponent(searchQuery));
+    if (selfTarget) {
+        window.open(searchUrlsByRecordType[recordType] + encodeURIComponent(searchQuery), '_self');
+    } else {
+        window.open(searchUrlsByRecordType[recordType] + encodeURIComponent(searchQuery));
+    }
+}
+
+const processEntrance = () => {
+    let urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('fromSheet') && urlParams.get('fromSheet') === 'true') {
+        let loc = urlParams.get('loc');
+        let query = urlParams.get('q');
+        if (!['g', 'w', 'n', 'r'].includes(loc)) {
+            return null;
+        }
+        switch (loc) {
+            case "g":
+                document.getElementById('goog-query').value = query;
+                googSearch(true);
+                break;
+            case "w":
+                document.getElementById('website-query').value = query;
+                searchWebsite(true);
+                break;
+            case "n":
+                document.getElementById('search-query').value = query;
+                searchRecord(true);
+                break;
+            case "r":
+                document.getElementById('internal-id').value = query;
+                goToRecordById(true);
+                break;
+            default:
+                break;
+        }
+    }
 }
 
 adjustFieldWidth();
 addEnterEventListeners();
 populateRecordTypes();
+processEntrance();
