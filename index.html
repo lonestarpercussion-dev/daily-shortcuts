@@ -64,6 +64,36 @@
         <button onclick="googSearch();">Google</button>
     </section>
     <section>
+        <h2>Add to Specs & Refinements</h2>
+        <fieldset>
+            <label for="spec-type">Type:</label>
+            <select name="spec-type" id="spec-type">
+                <option value="https://665798.app.netsuite.com/app/common/custom/custrecordentry.nl?rectype=112">Author</option>
+                <option value="https://665798.app.netsuite.com/app/site/setup/prescategory.nl">Site Category</option>
+                <option value="https://665798.app.netsuite.com/app/site/cms/services/commercecategory.nl">Commerce Category</option>
+                <option value="https://665798.app.netsuite.com/app/common/custom/custrecordentry.nl?rectype=107">Series</option>
+                <option value="https://665798.app.netsuite.com/app/common/custom/custrecordentry.nl?rectype=129">Artist</option>
+                <option value="https://665798.app.netsuite.com/app/common/custom/custrecordentry.nl?rectype=109">Material</option>
+                <option value="https://665798.app.netsuite.com/app/common/custom/custrecordentry.nl?rectype=157">Compatible With</option>
+                <option value="https://665798.app.netsuite.com/app/common/custom/custrecordentry.nl?rectype=91">Part Type</option>
+            </select>
+        </fieldset>
+        <button onclick="addToSpec();">Add to Spec</button>
+    </section>
+    <section>
+        <h2>Search Record</h2>
+        <fieldset>
+            <label for="record-type-search">Record Type:</label>
+            <select name="record-type-search" id="record-type-search">
+            </select>
+        </fieldset>
+        <fieldset>
+            <label for="search-query">Query:</label>
+            <input type="text" id="search-query" name="search-query">
+        </fieldset>
+        <button onclick="searchRecord();">Search Record</button>
+    </section>
+    <section>
         <h2>Go to Record with Internal ID</h2>
         <fieldset>
             <label for="record-type-id">Record Type:</label>
@@ -81,19 +111,6 @@
             <input type="radio" id="record-edit-radio" name="record-edit" checked>
         </fieldset>
         <button onclick="goToRecordById();">Go to Record</button>
-    </section>
-    <section>
-        <h2>Search Record</h2>
-        <fieldset>
-            <label for="record-type-search">Record Type:</label>
-            <select name="record-type-search" id="record-type-search">
-            </select>
-        </fieldset>
-        <fieldset>
-            <label for="search-query">Query:</label>
-            <input type="text" id="search-query" name="search-query">
-        </fieldset>
-        <button onclick="searchRecord();">Search Record</button>
     </section>
     <script src="js/scripts.js"></script>
 </body>

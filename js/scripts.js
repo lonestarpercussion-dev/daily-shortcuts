@@ -89,14 +89,12 @@ const googSearch = (selfTarget = false) => {
     }
 }
 
-const goToRecordById = (selfTarget = false) => {
-    let recordType = document.getElementById('record-type-id').value;
-    let recordId = document.getElementById('internal-id').value;
-    let edit = document.getElementById('record-edit-radio').checked ? '&e=T' : '';
+const addToSpec = (selfTarget = false) => {
+    let newSpecUrl = document.getElementById('spec-type').value;
     if (selfTarget) {
-        window.open(recordUrlsByRecordType[recordType] + recordId + edit, '_self');
+        window.open(newSpecUrl, '_self');
     } else {
-        window.open(recordUrlsByRecordType[recordType] + recordId + edit);
+        window.open(newSpecUrl);
     }
 }
 
@@ -107,6 +105,17 @@ const searchRecord = (selfTarget = false) => {
         window.open(searchUrlsByRecordType[recordType] + encodeURIComponent(searchQuery), '_self');
     } else {
         window.open(searchUrlsByRecordType[recordType] + encodeURIComponent(searchQuery));
+    }
+}
+
+const goToRecordById = (selfTarget = false) => {
+    let recordType = document.getElementById('record-type-id').value;
+    let recordId = document.getElementById('internal-id').value;
+    let edit = document.getElementById('record-edit-radio').checked ? '&e=T' : '';
+    if (selfTarget) {
+        window.open(recordUrlsByRecordType[recordType] + recordId + edit, '_self');
+    } else {
+        window.open(recordUrlsByRecordType[recordType] + recordId + edit);
     }
 }
 
