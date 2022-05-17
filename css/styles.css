@@ -183,3 +183,37 @@ a > button {
 button:hover {
     background-color: #f9e15e;
 }
+
+ul.list {
+    display: block;
+    line-height: 18px;
+    list-style-type: disc;
+    font: inherit;
+    font-size: 13px;
+    -webkit-tap-highlight-color: transparent;
+    margin: 0 0 20px 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    color: black;
+    width: calc(100%);
+    overflow: auto;
+}
+
+li {
+    float: left;
+    width: calc(100% - 30px);
+    color: black;
+    -webkit-tap-highlight-color: transparent;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    margin: 0 0 0 30px;
+    padding: 0;
+    line-height: 18px;
+}
+
+li > a {
+    display: block;
+    width: 100%;
+}
