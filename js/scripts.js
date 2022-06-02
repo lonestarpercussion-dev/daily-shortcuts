@@ -8,6 +8,9 @@ const recordUrlsByRecordType = {
     'Quote': 'https://665798.app.netsuite.com/app/accounting/transactions/estimate.nl?id=',
     'Tooltip': 'https://665798.app.netsuite.com/app/common/custom/custrecordentry.nl?rectype=134&id=',
     'Custom Record Type': 'https://665798.app.netsuite.com/app/common/custom/custrecord.nl?id=',
+    'Item Field (Numeric IDs Only)': 'https://665798.app.netsuite.com/app/common/custom/itemcustfield.nl?id=',
+    'Transaction Body Field (Numeric IDs Only)': 'https://665798.app.netsuite.com/app/common/custom/bodycustfield.nl?id=',
+    'Transaction Line Field (Numeric IDs Only)': 'https://665798.app.netsuite.com/app/common/custom/columncustfield.nl?id=',
 }
 
 const searchUrlsByRecordType = {
