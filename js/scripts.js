@@ -5,6 +5,7 @@ const recordUrlsByRecordType = {
     'Promotion': 'https://665798.app.netsuite.com/app/site/cms/services/commercecategory.nl?id=',
     'Saved Search': 'https://665798.app.netsuite.com/app/common/search/searchresults.nl?searchid=',
     'Sales Order': 'https://665798.app.netsuite.com/app/accounting/transactions/salesord.nl?id=',
+    'Purchase Order': 'https://665798.app.netsuite.com/app/accounting/transactions/purchord.nl?id=',
     'Quote': 'https://665798.app.netsuite.com/app/accounting/transactions/estimate.nl?id=',
     'Tooltip': 'https://665798.app.netsuite.com/app/common/custom/custrecordentry.nl?rectype=134&id=',
     'Custom Record Type': 'https://665798.app.netsuite.com/app/common/custom/custrecord.nl?id=',
@@ -17,6 +18,7 @@ const searchUrlsByRecordType = {
     'Inventory Item': 'https://665798.app.netsuite.com/app/common/search/ubersearchresults.nl?quicksearch=T&searchtype=Uber&frame=be&Uber_NAMEtype=KEYWORDSTARTSWITH&Uber_NAME=inventory%3A',
     'Saved Search': 'https://665798.app.netsuite.com/app/common/search/ubersearchresults.nl?quicksearch=T&searchtype=Uber&frame=be&Uber_NAMEtype=KEYWORDSTARTSWITH&Uber_NAME=search%3A',
     'Sales Order': 'https://665798.app.netsuite.com/app/common/search/ubersearchresults.nl?quicksearch=T&searchtype=Uber&frame=be&Uber_NAMEtype=KEYWORDSTARTSWITH&Uber_NAME=sales%3A',
+    'Purchase Order': 'https://665798.app.netsuite.com/app/common/search/ubersearchresults.nl?quicksearch=T&searchtype=Uber&frame=be&Uber_NAMEtype=KEYWORDSTARTSWITH&Uber_NAME=purchase%3A',
     'Quote': 'https://665798.app.netsuite.com/app/common/search/ubersearchresults.nl?quicksearch=T&searchtype=Uber&frame=be&Uber_NAMEtype=KEYWORDSTARTSWITH&Uber_NAME=quote%3A',
     'Tooltip': 'https://665798.app.netsuite.com/app/common/search/ubersearchresults.nl?quicksearch=T&searchtype=Uber&frame=be&Uber_NAMEtype=KEYWORDSTARTSWITH&Uber_NAME=definition%3A',
 }
